@@ -4,7 +4,7 @@ import { HiArrowsRightLeft } from "react-icons/hi2";
 import { MdOutlineDarkMode, MdLightMode } from "react-icons/md";
 import Chart from "chart.js/auto"; // Import Chart.js library
 
-const CurrencyConvertor = () => {
+const CurrencyConverter = () => {
   const [currencies, setCurrencies] = useState([]);
   const [amount, setAmount] = useState(1);
   const [fromCurrency, setFromCurrency] = useState("EUR");
@@ -279,4 +279,4 @@ const CurrencyConvertor = () => {
   );
 };
 
-export default CurrencyConvertor;
+export default CurrencyConverter;
