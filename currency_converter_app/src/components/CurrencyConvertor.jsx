@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import CurrencySelector from "./CurrencySelector";
 import { HiArrowsRightLeft } from "react-icons/hi2";
 import { MdOutlineDarkMode, MdLightMode } from "react-icons/md";
-import Chart from "chart.js/auto"; // Import Chart.js if you want to use charts
+import Chart from "chart.js/auto"; // Import Chart.js library
 
 const CurrencyConvertor = () => {
   const [currencies, setCurrencies] = useState([]);
@@ -56,6 +56,7 @@ const CurrencyConvertor = () => {
       setExchangeRate(data.rates[toCurrency]);
       setConvertedAmount(data.rates[toCurrency] * amount + " " + toCurrency);
     } catch (error) {
+
       // Error handling
       setError("Conversion error. Please try again.");
       console.error("Error fetching conversion data", error);
@@ -134,6 +135,7 @@ const CurrencyConvertor = () => {
 
       {error && <div className="text-red-500 text-center mb-4">{error}</div>}
 
+         {/* From Currency Selector */}  
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end">
         <CurrencySelector
           favorites={favorites}
@@ -151,6 +153,7 @@ const CurrencyConvertor = () => {
           >
             <HiArrowsRightLeft className="text-xl text-gray-700 dark:text-gray-200" />
           </button>
+         {/* To Currency Selector */}
         </div>
         <CurrencySelector
           favorites={favorites}
