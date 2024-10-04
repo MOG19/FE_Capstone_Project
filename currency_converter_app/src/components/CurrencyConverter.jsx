@@ -234,7 +234,7 @@ const CurrencyConverter = () => {
           </table>
         </div>
       )}
-
+      {/* Amount Input Section */}
       <div className="mt-4">
         <label
           htmlFor="amount"
