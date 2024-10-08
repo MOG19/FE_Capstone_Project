@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import CurrencySelector from "./CurrencySelector";
 import { HiArrowsRightLeft } from "react-icons/hi2";
 import { MdOutlineDarkMode, MdLightMode } from "react-icons/md";
-import Chart from "chart.js/auto"; // Import Chart.js library
+import Chart from "chart.js/auto";
 
 const CurrencyConverter = () => {
   const [currencies, setCurrencies] = useState([]);
@@ -90,7 +90,7 @@ const CurrencyConverter = () => {
     let updatedFavorites = [...favorites];
 
     if (favorites.includes(currency)) {
-      updatedFavorites = updatedFavorites.filter((fav) => fav !== currency);
+      updatedFavorites = updatedFavorites.filter((fav) => fav != currency);
     } else {
       updatedFavorites.push(currency);
     }
@@ -272,7 +272,7 @@ const CurrencyConverter = () => {
       {/* Converted Amount Display */}
       {convertedAmount && (
         <div className="mt-4 text-lg font-medium text-center text-orange-600 hover:text-orange-500 dark:text-orange-400">
-          Converted Amount: {convertedAmount}
+          Converted Amount: {exchangeRate} {toCurrency}
         </div>
       )}
     </div>
